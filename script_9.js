@@ -22,7 +22,15 @@ for (let index = 0; index < fsize; index++) {
 text += "</ul>";
 
 document.getElementById("demo").innerHTML = text;
-console.log(fruits.slice(0, 3))
+// console.log(fruits.slice(0, 3))
+// console.log(fruits);
+fruits.sort();
+// console.log(fruits);
+
+// console.log(fruits.slice(1, 3));
+// console.log(fruits.concat("Guava"));
+
+document.getElementById("demo1").innerHTML = fruits.concat("Guava");
 // function myFunction() {
 //     fruits.push("Lemon");
 //     document.getElementById("demo").innerHTML = "<li>" + fruits + "</li>";

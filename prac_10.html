@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Map</h1>
+    <p id="demo1"></p>
+    <h1>Filter</h1>
+    <p id="demo2"></p>
+    <h1>Reduce</h1>
+    <p id="demo3"></p>
+    <script>
+        // let txt = "";
+        const numbers1 = [20, 25, 10, 5, 7, 9];
+        // numbers.forEach(element => {
+        //     console.log(element);
+        //     txt +=  element + "<br>";
+        // });
+        console.log("Position of 5 will be",numbers1.indexOf(5));
+        const numbers2 = numbers1.map(myFirstFunction);
+        const over18 = numbers1.filter(mySecondFunction);
+        let sum = numbers1.reduce(myThirdFunction);
+        document.getElementById("demo1").innerHTML = numbers2;
+        document.getElementById("demo2").innerHTML = over18;
+        document.getElementById("demo3").innerHTML = sum;
+        function myFirstFunction(element) {
+            return element * 2;
+        }
+        function mySecondFunction(element) {
+            return element > 18;
+        }
+        function myThirdFunction(total, element) {
+            return total + element;
+        }
+    </script>
+</body>
+
+</html>
